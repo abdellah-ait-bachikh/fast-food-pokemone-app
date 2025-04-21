@@ -51,6 +51,7 @@
   text-decoration: none;
   @apply text-black dark:text-white;
 }
-button {
-  /* border: none; */
+
+a.active {
+  @apply bg-gray-100 border-gray-200 dark:bg-slate-800 dark:border-gray-200;
 }
