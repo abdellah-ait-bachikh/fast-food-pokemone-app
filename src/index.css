@@ -48,6 +48,8 @@
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
+  text-decoration: none;
+  @apply text-black dark:text-white;
 }
 button {
   border: none;

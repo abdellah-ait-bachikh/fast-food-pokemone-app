@@ -15,5 +15,5 @@ const appSlice = createSlice({
   },
 });
 
-export const addActions = appSlice.actions;
+export const {setAsideOpen} = appSlice.actions;
 export const appReducer = appSlice.reducer;

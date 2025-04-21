@@ -4,13 +4,11 @@ import App from "./App";
 import "./index.css";
 import "./demos/ipc";
 import { HeroUIProvider, ToastProvider } from "@heroui/react";
-import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
       <HeroUIProvider
         locale="fr-FR"
         className="w-full min-h-screen bg-gray-100 dark:bg-slate-900 flex"
@@ -23,7 +21,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           />
         </Provider>
       </HeroUIProvider>
-    </BrowserRouter>
+   
   </React.StrictMode>
 );
 

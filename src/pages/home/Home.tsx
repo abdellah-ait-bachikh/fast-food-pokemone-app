@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <div className="rounded-3xl p-3 bg-white">this is custem dive</div>
+      <div className="rounded-xl p-3 bg-white dark:bg-slate-900">this is custem dive</div>
     </div>
   );
 };

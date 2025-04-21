@@ -6,9 +6,9 @@ const Layout = () => {
   return (
     <>
       <Aside />
-      <section className="flex-grow bg-amber-100 min-h-[200vh] transition-width ">
+      <section className="flex-grow  bg-gray-100 dark:bg-slate-950 min-h-[200vh] transition-width ">
         <Header />
-        <Outlet />
+       <main className="p-4"><Outlet /></main> 
       </section>
     </>
   );
