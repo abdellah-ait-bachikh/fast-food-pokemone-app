@@ -52,5 +52,5 @@
   @apply text-black dark:text-white;
 }
 button {
-  border: none;
+  /* border: none; */
 }

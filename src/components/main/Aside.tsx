@@ -4,7 +4,7 @@ import { TinitialState } from "@/type/statesTypes";
 import classNames from "classnames";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Aside = () => {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const Aside = () => {
     (state: { app: TinitialState }) => state.app
   );
   useEffect(() => {
-    dispatch(setAsideOpen(true));
+    dispatch(setAsideOpen(false));
   }, []);
   return (
     <div
@@ -29,30 +29,27 @@ const Aside = () => {
         <div className="w-full flex flex-col gap-2 mt-16">
           {links.map((e) => (
             <div key={e.name} className="w-full ">
-              <Link
+              <NavLink
                 to={e.href}
                 className={classNames(
-                  "flex items-center overflow-hidden border-3 border-  gap-3 bg-amber-500/60 rounded-xl transition-width  h-[42px] p-[11px]",
+                  "flex items-center overflow-hidden border-3 dark:border-slate-600   gap-3 bg-amber-500/60 dark:bg-slate-950 rounded-xl transition-width  h-[47px] p-[11px]",
                   {
-                    "w-[42px] justify-start": !isAsideOpen,
+                    "w-[47px] justify-start": !isAsideOpen,
                     "w-full ": isAsideOpen,
                   }
                 )}
               >
-                <span className={classNames("text-xl my-auto")}>
+                <span className={classNames("text-xl ")}>
                   {React.createElement(e.icon)}
                 </span>
                 <span
                   className={classNames(
-                    "font-semibold text-[17px] tracking-widest my-auto",
-                    {
-                      // hidden: !isAsideOpen,
-                    }
+                    "font-semibold text-[17px] tracking-widest "
                   )}
                 >
                   {e.name}
                 </span>
-              </Link>
+              </NavLink>
             </div>
           ))}
         </div>

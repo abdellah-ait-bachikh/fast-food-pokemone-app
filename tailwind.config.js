@@ -10,9 +10,7 @@ export default {
   theme: {
     extend: {},
   },
-  corePlugins: {
-    preflight: false,
-  },
+ 
   darkMode: "class",
   plugins: [heroui()],
 };
