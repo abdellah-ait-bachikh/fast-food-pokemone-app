@@ -10,7 +10,7 @@ const MountlyPaymentsShart: React.FC = () => {
     chart: {
       type: "area",
       zoom: {
-        enabled: false,
+        enabled: true,
       },
       width: "100%",
     },
@@ -35,17 +35,17 @@ const MountlyPaymentsShart: React.FC = () => {
         "Oct",
         "Nov",
         "Déc",
-      ], // mois de l'année
+      ], 
       title: {
         text: "Mois",
         style: {
-          fontSize: "0.875rem", // Tailwind equivalent of text-sm
-          fontWeight: "500", // Tailwind equivalent of font-medium
+          fontSize: "0.875rem", 
+          fontWeight: "500", 
         },
       },
       labels: {
         style: {
-          fontSize: "0.875rem", // Tailwind equivalent of text-sm
+          fontSize: "0.875rem", 
         },
       },
     },
@@ -53,13 +53,13 @@ const MountlyPaymentsShart: React.FC = () => {
       title: {
         text: "Recettes (en DH)",
         style: {
-          fontSize: "0.875rem", // Tailwind equivalent of text-sm
-          fontWeight: "500", // Tailwind equivalent of font-medium
+          fontSize: "0.875rem", 
+          fontWeight: "500", 
         },
       },
       labels: {
         style: {
-          fontSize: "0.875rem", // Tailwind equivalent of text-sm
+          fontSize: "0.875rem", 
         },
       },
     },
@@ -80,12 +80,12 @@ const MountlyPaymentsShart: React.FC = () => {
         opacityTo: 0.1,
       },
     },
-    colors: ["#22c55e", "#3b82f6"], // Green for Sales in Money and Blue for Number of Orders
+    colors: ["#22c55e", "#3b82f6"],
     legend: {
-      position: "top", // Adjust the legend position to the top
-      horizontalAlign: "center", // Center the legend horizontally
+      position: "top", 
+      horizontalAlign: "center", 
       onItemClick: {
-        toggleDataSeries: true, // Allow user to toggle visibility of data series
+        toggleDataSeries: true, 
       },
     },
     theme: {
@@ -97,21 +97,19 @@ const MountlyPaymentsShart: React.FC = () => {
     },
   };
 
-  // Sample data: Recettes et nombre de commandes vendues pour chaque mois
   const series = [
     {
-      name: "Recettes en argent", // Sales in money series
+      name: "Recettes en argent", 
       data: [
         1500, 2500, 1800, 3000, 2000, 2300, 2900, 3200, 3500, 4000, 3800, 4200,
-      ], // Example money values for each month
+      ],
     },
     {
-      name: "Nombre de commandes", // Number of orders series
-      data: [500, 600, 550, 700, 650, 800, 900, 1000, 1100, 1200, 1300, 1400], // Example number of orders sold each month
+      name: "Nombre de commandes", 
+      data: [500, 600, 550, 700, 650, 800, 900, 1000, 1100, 1200, 1300, 1400],
     },
   ];
   useEffect(() => {
-    // Dispatch resize event to force chart re-layout
     window.dispatchEvent(new Event('resize'));
   }, [isAsideOpen]);
   return (

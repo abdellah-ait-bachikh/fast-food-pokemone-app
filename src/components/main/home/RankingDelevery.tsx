@@ -67,6 +67,83 @@ const RankingDelevery = () => {
               <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
           </tbody>
         </table>
       </div>
