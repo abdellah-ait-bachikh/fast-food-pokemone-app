@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HeroUIProvider
       locale="fr-FR"
-      className="w-full min-h-screen bg-white dark:bg-slate-900  flex justify-start items-start z-[999] "
+      className="w-full min-h-screen overflow-clip bg-white dark:bg-slate-900  flex justify-start items-start z-[999] "
     >
       <Provider store={store}>
         <App />

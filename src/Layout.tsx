@@ -8,7 +8,7 @@ const Layout = () => {
       <Aside />
       <section className="flex-1 transition-width flex flex-col ">
         <Header />
-        <main className="p-2 bg-gray-100 dark:bg-slate-950  z-[997] flex flex-grow w-full ">
+        <main className="p-2 bg-gray-100 dark:bg-slate-950  z-[997] flex flex-grow w-full min-h-screen">
           <Outlet />
         </main>
       </section>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts"; // Importing ApexOptions for correct typing
 import { useSelector } from "react-redux";
@@ -110,7 +110,10 @@ const MountlyPaymentsShart: React.FC = () => {
       data: [500, 600, 550, 700, 650, 800, 900, 1000, 1100, 1200, 1300, 1400], // Example number of orders sold each month
     },
   ];
-
+  useEffect(() => {
+    // Dispatch resize event to force chart re-layout
+    window.dispatchEvent(new Event('resize'));
+  }, [isAsideOpen]);
   return (
     <div className="mt-6 rounded-lg  w-full grid grid-cols-1 ">
       <Chart options={options} series={series} type="area" height={450} width='100%' />
