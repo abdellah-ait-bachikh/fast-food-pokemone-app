@@ -21,7 +21,7 @@ const RankingProducts = () => {
     <div className=" rounded-xl  grid grid-cols-1 gap-2 ">
       <div className="bg-white dark:bg-slate-800 rounded-xl px-2 pb-2 h-[400px]  overflow-y-auto relative">
         <div className="sticky top-0 right-0 left-0 w-full p-2 backdrop-blur-sm z-[997]">
-          <div className="flex gap-3 flex-nowrap items-baseline">
+          <div className="flex gap-3 flex-nowrap items-center">
             <FaRankingStar className="text-3xl" />
             <h1 className="text-2xl font-semibold">Meilleurs produits</h1>{" "}
           </div>

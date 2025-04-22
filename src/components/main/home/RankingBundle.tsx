@@ -1,13 +1,19 @@
 import { Accordion, AccordionItem } from "@heroui/react";
 import React from "react";
-import { FaRankingStar } from "react-icons/fa6";
+import { HiOutlineCheckBadge } from "react-icons/hi2";
 
 const RankingBundle = () => {
   return (
-    <div className="bg-white  dark:bg-slate-800 rounded-xl px-2 pb-2   overflow-y-auto">
-      <div className=" relative">
+    <div className="bg-white  dark:bg-slate-800 rounded-xl px-2 pb-2   overflow-y-auto relative">
+        <div className="sticky top-0 right-0 left-0 w-full p-2 backdrop-blur-sm z-[997]">
+          <div className="flex gap-3 flex-nowrap items-center">
+            <HiOutlineCheckBadge className="text-3xl" />
+            <h1 className="text-2xl font-semibold">Meilleurs Packes</h1>{" "}
+          </div>
+        </div>
+ 
         <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 ">
-          <thead className="ltr:text-left rtl:text-right sticky top-0 left-0 right-0 h-[41px] backdrop-blur-md">
+          <thead className="ltr:text-left rtl:text-right sticky top-[54px] left-0 right-0 h-[41px] backdrop-blur-sm">
             <tr className=" *:text-gray-900 dark:*:text-white">
               <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
                 Nome
@@ -61,9 +67,64 @@ const RankingBundle = () => {
               <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
           </tbody>
         </table>
-      </div>
     </div>
   );
 };
