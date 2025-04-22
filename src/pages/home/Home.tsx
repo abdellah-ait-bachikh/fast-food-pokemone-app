@@ -9,7 +9,7 @@ const Home = () => {
       <DashboardSummary />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-3">
         <RankingProducts />
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 h-[400px] ">
           <RankingBundle />
           <RankingDelevery />
         </div>

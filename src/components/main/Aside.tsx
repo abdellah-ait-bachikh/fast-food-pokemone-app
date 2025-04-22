@@ -26,11 +26,12 @@ const Aside = () => {
       )}
     >
       <div className="w-full h-full flex flex-col items-center p-4 relative">
-        <div>logo</div>{" "}
+        <div className="w-full">
+          <img className="w-full" src="/images/poke_logo.png"/></div>{" "}
         <div className="md:hidden absolute top-3 right-3">
           <AsideToogle />
         </div>
-        <div className="w-full flex-grow flex flex-col gap-2 mt-16">
+        <div className="w-full flex-grow flex flex-col gap-2 mt-7">
           {links.map((e) => (
             <div key={e.name} className="w-full ">
               <NavLink
