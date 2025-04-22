@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <Aside />
-      <section className="flex-1    min-h-[200vh] transition-width flex flex-col overflow-clip ">
+      <section className="flex-1 transition-width flex flex-col ">
         <Header />
         <main className="p-2 bg-gray-100 dark:bg-slate-950  z-[997] flex flex-grow w-full ">
           <Outlet />

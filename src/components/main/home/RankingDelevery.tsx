@@ -4,20 +4,18 @@ import { FaRankingStar } from "react-icons/fa6";
 
 const RankingDelevery = () => {
   return (
-    <div className="bg-white row-span-1 dark:bg-slate-800 rounded-xl px-2 pb-2   overflow-y-auto relative">
-      <div className="overflow-x-auto">
-        <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 relative">
-          <thead className="ltr:text-left rtl:text-right sticky top-0 left-0 right-0">
+    <div className="bg-white   dark:bg-slate-800 rounded-xl px-2 pb-2   overflow-y-auto">
+      <div className=" relative">
+        <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 ">
+          <thead className="ltr:text-left rtl:text-right sticky top-0 left-0 right-0 h-[41px] backdrop-blur-md">
             <tr className=" *:text-gray-900 dark:*:text-white">
-              <th className="px-3 py-2 whitespace-nowrap font-semibold">
-                Name
+              <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
+                Nome
               </th>
-              <th className="px-3 py-2 whitespace-nowrap font-semibold">DoB</th>
-              <th className="px-3 py-2 whitespace-nowrap font-semibold">
-                Role
-              </th>
-              <th className="px-3 py-2 whitespace-nowrap font-semibold">
-                Salary
+              <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">Commandes</th>
+             
+              <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
+                Inscri le
               </th>
             </tr>
           </thead>
@@ -27,34 +25,35 @@ const RankingDelevery = () => {
               <td className="px-3 py-2 whitespace-nowrap">
                 Nandor the Relentless
               </td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
               <td className="px-3 py-2 whitespace-nowrap">04/06/1262</td>
-              <td className="px-3 py-2 whitespace-nowrap">Vampire Warrior</td>
-              <td className="px-3 py-2 whitespace-nowrap">$0</td>
+              
             </tr>
 
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
                 Laszlo Cravensworth
               </td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+
               <td className="px-3 py-2 whitespace-nowrap">19/10/1678</td>
-              <td className="px-3 py-2 whitespace-nowrap">Vampire Gentleman</td>
-              <td className="px-3 py-2 whitespace-nowrap">$0</td>
+             
             </tr>
 
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">Nadja</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+
               <td className="px-3 py-2 whitespace-nowrap">15/03/1593</td>
-              <td className="px-3 py-2 whitespace-nowrap">
-                Vampire Seductress
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">$0</td>
+              
             </tr>
 
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">Colin Robinson</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+
               <td className="px-3 py-2 whitespace-nowrap">01/09/1971</td>
-              <td className="px-3 py-2 whitespace-nowrap">Energy Vampire</td>
-              <td className="px-3 py-2 whitespace-nowrap">$53,000</td>
+              
             </tr>
 
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
@@ -62,10 +61,8 @@ const RankingDelevery = () => {
                 Guillermo de la Cruz
               </td>
               <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
-              <td className="px-3 py-2 whitespace-nowrap">
-                Familiar/Vampire Hunter
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">$0</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+
             </tr>
           </tbody>
         </table>

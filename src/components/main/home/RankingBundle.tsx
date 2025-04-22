@@ -1,61 +1,71 @@
-import { Accordion, AccordionItem } from '@heroui/react'
-import React from 'react'
-import { FaRankingStar } from 'react-icons/fa6'
+import { Accordion, AccordionItem } from "@heroui/react";
+import React from "react";
+import { FaRankingStar } from "react-icons/fa6";
 
 const RankingBundle = () => {
   return (
-<div className="bg-white row-span-1 dark:bg-slate-800 rounded-xl px-2 pb-2   overflow-y-auto relative">
-       
-<div className="overflow-x-auto">
-  <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700">
-    <thead className="ltr:text-left rtl:text-right">
-      <tr className="*:font-medium *:text-gray-900 dark:*:text-white">
-        <th className="px-3 py-2 whitespace-nowrap">Name</th>
-        <th className="px-3 py-2 whitespace-nowrap">DoB</th>
-        <th className="px-3 py-2 whitespace-nowrap">Role</th>
-        <th className="px-3 py-2 whitespace-nowrap">Salary</th>
-      </tr>
-    </thead>
+    <div className="bg-white  dark:bg-slate-800 rounded-xl px-2 pb-2   overflow-y-auto">
+      <div className=" relative">
+        <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 ">
+          <thead className="ltr:text-left rtl:text-right sticky top-0 left-0 right-0 h-[41px] backdrop-blur-md">
+            <tr className=" *:text-gray-900 dark:*:text-white">
+              <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
+                Nome
+              </th>
+              <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
+                Quantité
+              </th>
 
-    <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-      <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-        <td className="px-3 py-2 whitespace-nowrap">Nandor the Relentless</td>
-        <td className="px-3 py-2 whitespace-nowrap">04/06/1262</td>
-        <td className="px-3 py-2 whitespace-nowrap">Vampire Warrior</td>
-        <td className="px-3 py-2 whitespace-nowrap">$0</td>
-      </tr>
+              <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
+                Crée Le
+              </th>
+            </tr>
+          </thead>
 
-      <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-        <td className="px-3 py-2 whitespace-nowrap">Laszlo Cravensworth</td>
-        <td className="px-3 py-2 whitespace-nowrap">19/10/1678</td>
-        <td className="px-3 py-2 whitespace-nowrap">Vampire Gentleman</td>
-        <td className="px-3 py-2 whitespace-nowrap">$0</td>
-      </tr>
+          <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Nandor the Relentless
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+              <td className="px-3 py-2 whitespace-nowrap">04/06/1262</td>
+            </tr>
 
-      <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-        <td className="px-3 py-2 whitespace-nowrap">Nadja</td>
-        <td className="px-3 py-2 whitespace-nowrap">15/03/1593</td>
-        <td className="px-3 py-2 whitespace-nowrap">Vampire Seductress</td>
-        <td className="px-3 py-2 whitespace-nowrap">$0</td>
-      </tr>
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Laszlo Cravensworth
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
 
-      <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-        <td className="px-3 py-2 whitespace-nowrap">Colin Robinson</td>
-        <td className="px-3 py-2 whitespace-nowrap">01/09/1971</td>
-        <td className="px-3 py-2 whitespace-nowrap">Energy Vampire</td>
-        <td className="px-3 py-2 whitespace-nowrap">$53,000</td>
-      </tr>
+              <td className="px-3 py-2 whitespace-nowrap">19/10/1678</td>
+            </tr>
 
-      <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-        <td className="px-3 py-2 whitespace-nowrap">Guillermo de la Cruz</td>
-        <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
-        <td className="px-3 py-2 whitespace-nowrap">Familiar/Vampire Hunter</td>
-        <td className="px-3 py-2 whitespace-nowrap">$0</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-      </div>  )
-}
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">Nadja</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
 
-export default RankingBundle
+              <td className="px-3 py-2 whitespace-nowrap">15/03/1593</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">Colin Robinson</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+
+              <td className="px-3 py-2 whitespace-nowrap">01/09/1971</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                Guillermo de la Cruz
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default RankingBundle;
