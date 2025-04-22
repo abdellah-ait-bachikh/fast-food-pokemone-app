@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: TinitialState = {
   isAsideOpen: false,
+  theme: (localStorage.getItem("theme") as "light" | "dark") || "light",
 };
 
 const appSlice = createSlice({
@@ -12,8 +13,11 @@ const appSlice = createSlice({
     setAsideOpen(state, action: PayloadAction<boolean>) {
       state.isAsideOpen = action.payload;
     },
+    setTheme(state, action: PayloadAction<"light" | "dark">) {
+      state.theme = action.payload;
+    },
   },
 });
 
-export const {setAsideOpen} = appSlice.actions;
+export const { setAsideOpen,setTheme } = appSlice.actions;
 export const appReducer = appSlice.reducer;

@@ -1,9 +1,19 @@
-import React from "react";
+import DashboardSummary from "@/components/main/home/DashboardSummary";
+import RankingBundle from "@/components/main/home/RankingBundle";
+import RankingDelevery from "@/components/main/home/RankingDelevery";
+import RankingProducts from "@/components/main/home/RankingProducts";
 
 const Home = () => {
   return (
-    <div>
-      <div className="rounded-xl p-3 bg-white dark:bg-slate-900">this is custem dive</div>
+    <div className="w-full min-h-full">
+      <DashboardSummary />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-3">
+        <RankingProducts />
+        <div className="flex flex-col gap-2">
+          <RankingBundle />
+          <RankingDelevery />
+        </div>
+      </div>
     </div>
   );
 };

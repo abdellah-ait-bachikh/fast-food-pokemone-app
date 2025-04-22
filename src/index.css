@@ -53,5 +53,29 @@
 }
 
 a.active {
-  @apply bg-gray-100 border-gray-200 dark:bg-slate-800 dark:border-gray-200;
+  @apply bg-amber-500 border-gray-200 dark:bg-slate-800 dark:border-gray-200 rounded-3xl transition-all duration-700 ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+}
+
+/* Track (the background) */
+::-webkit-scrollbar-track {
+  @apply  bg-black   ;
+  border-radius: 2px;
+}
+
+/* Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  @apply  bg-warning-500 dark:bg-slate-200  ;
+  cursor: -webkit-grab;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply  bg-warning-600 dark:bg-slate-500  ;
 }

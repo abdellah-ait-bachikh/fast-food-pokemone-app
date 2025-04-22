@@ -7,17 +7,9 @@ import { update } from "./update";
 
 const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const serverPath = "C:/Users/abdel/Desktop/projetcs/pc/pockemone-fastfood/server/dist/index.js";
+const { startServer } = require(serverPath);
 
-// The built directory structure
-//
-// ├─┬ dist-electron
-// │ ├─┬ main
-// │ │ └── index.js    > Electron-Main
-// │ └─┬ preload
-// │   └── index.mjs   > Preload-Scripts
-// ├─┬ dist
-// │ └── index.html    > Electron-Renderer
-//
 process.env.APP_ROOT = path.join(__dirname, "../..");
 
 export const MAIN_DIST = path.join(process.env.APP_ROOT, "dist-electron");
@@ -83,8 +75,10 @@ async function createWindow() {
   update(win);
 }
 
-app.whenReady().then(createWindow);
-
+app.whenReady().then(() => {
+  startServer();  // <-- run your Express server first
+  createWindow(); // <-- then open your Electron window
+});
 app.on("window-all-closed", () => {
   win = null;
   if (process.platform !== "darwin") app.quit();
