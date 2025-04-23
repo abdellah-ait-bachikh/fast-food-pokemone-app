@@ -5,7 +5,9 @@ import { useSelector } from "react-redux";
 import { TinitialState } from "@/type/statesTypes";
 
 const MountlyPaymentsShart: React.FC = () => {
-  const { theme,isAsideOpen } = useSelector((state: { app: TinitialState }) => state.app);
+  const { theme, isAsideOpen } = useSelector(
+    (state: { app: TinitialState }) => state.app
+  );
   const options: ApexOptions = {
     chart: {
       type: "area",
@@ -35,17 +37,17 @@ const MountlyPaymentsShart: React.FC = () => {
         "Oct",
         "Nov",
         "Déc",
-      ], 
+      ],
       title: {
         text: "Mois",
         style: {
-          fontSize: "0.875rem", 
-          fontWeight: "500", 
+          fontSize: "0.875rem",
+          fontWeight: "500",
         },
       },
       labels: {
         style: {
-          fontSize: "0.875rem", 
+          fontSize: "0.875rem",
         },
       },
     },
@@ -53,13 +55,13 @@ const MountlyPaymentsShart: React.FC = () => {
       title: {
         text: "Recettes (en DH)",
         style: {
-          fontSize: "0.875rem", 
-          fontWeight: "500", 
+          fontSize: "0.875rem",
+          fontWeight: "500",
         },
       },
       labels: {
         style: {
-          fontSize: "0.875rem", 
+          fontSize: "0.875rem",
         },
       },
     },
@@ -82,10 +84,10 @@ const MountlyPaymentsShart: React.FC = () => {
     },
     colors: ["#22c55e", "#3b82f6"],
     legend: {
-      position: "top", 
-      horizontalAlign: "center", 
+      position: "top",
+      horizontalAlign: "center",
       onItemClick: {
-        toggleDataSeries: true, 
+        toggleDataSeries: true,
       },
     },
     theme: {
@@ -99,22 +101,28 @@ const MountlyPaymentsShart: React.FC = () => {
 
   const series = [
     {
-      name: "Recettes en argent", 
+      name: "Recettes en argent",
       data: [
         1500, 2500, 1800, 3000, 2000, 2300, 2900, 3200, 3500, 4000, 3800, 4200,
       ],
     },
     {
-      name: "Nombre de commandes", 
+      name: "Nombre de commandes",
       data: [500, 600, 550, 700, 650, 800, 900, 1000, 1100, 1200, 1300, 1400],
     },
   ];
   useEffect(() => {
-    window.dispatchEvent(new Event('resize'));
+    window.dispatchEvent(new Event("resize"));
   }, [isAsideOpen]);
   return (
     <div className="mt-6 rounded-lg  w-full grid grid-cols-1 ">
-      <Chart options={options} series={series} type="area" height={450} width='100%' />
+      <Chart
+        options={options}
+        series={series}
+        type="area"
+        height={450}
+        width="100%"
+        />
     </div>
   );
 };
