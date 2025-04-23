@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem } from "@heroui/react";
+import { Accordion, AccordionItem, Avatar } from "@heroui/react";
 import { ApexOptions } from "apexcharts";
 import Chart from "react-apexcharts";
 import { FaRankingStar } from "react-icons/fa6";
@@ -26,17 +26,15 @@ const RankingProducts = () => {
             <h1 className="text-2xl font-semibold">Meilleurs produits</h1>{" "}
           </div>
         </div>
-        <Accordion selectionMode="multiple">
+        <Accordion selectionMode="multiple" variant="light">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((e) => (
             <AccordionItem
               key={e}
               aria-label={`Produits ${e}`}
-              title={
-                <span className="flex flex-nowrap gap-2 items-center">
-                  <div className="w-6"><img className="w-full aspect-square" src="/images/poke_close.png" alt="" /></div>
-                  <span className="font-semibold">{`Produits ${e}`}</span>
-                </span>
-              }
+              startContent={<Avatar  src="/images/tacos.png" className="bg-transparent" size="lg"/>}
+              subtitle="436"
+              title="Tacos Mixte"
+              classNames={{base:"dark:bg-slate-800"}}
             >
               {e} Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Iusto ratione temporibus voluptate libero, modi adipisci corrupti
