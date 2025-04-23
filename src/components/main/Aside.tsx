@@ -26,9 +26,14 @@ const Aside = () => {
       )}
     >
       <div className="w-full h-full flex flex-col items-center p-4 relative">
-        <div className={classNames("transition-width", { "w-[55px]": !isAsideOpen, "w-[160px]": isAsideOpen })}>
+        <div
+          className={classNames("transition-width", {
+            "w-[55px]": !isAsideOpen,
+            "w-[160px]": isAsideOpen,
+          })}
+        >
           <img className="w-full" src="/images/poke_logo.png" />
-        </div>{" "}
+        </div>
         <div className="md:hidden absolute top-3 right-3">
           <AsideToogle />
         </div>

@@ -1,6 +1,7 @@
-import { Accordion, AccordionItem } from "@heroui/react";
+import { Accordion, AccordionItem, User } from "@heroui/react";
 import React from "react";
 import { PiShootingStarThin } from "react-icons/pi";
+import { FaMotorcycle } from "react-icons/fa6";
 
 const RankingDelevery = () => {
   return (
@@ -13,7 +14,7 @@ const RankingDelevery = () => {
       </div>
       <div className=" relative">
         <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 ">
-          <thead className="ltr:text-left rtl:text-right sticky  top-[54px] left-0 right-0 h-[41px] backdrop-blur-sm">
+          <thead className="ltr:text-left rtl:text-right sticky  top-[54px] left-0 right-0 h-[41px] backdrop-blur-sm z-[996]">
             <tr className=" *:text-gray-900 dark:*:text-white">
               <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
                 Nome
@@ -23,7 +24,7 @@ const RankingDelevery = () => {
               </th>
 
               <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
-                Inscri le
+              Montant Collecté (DH)
               </th>
             </tr>
           </thead>
@@ -31,117 +32,133 @@ const RankingDelevery = () => {
           <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Nandor the Relentless
+                <User name="Livreur 1" description="19/10/1678" avatarProps={{icon:<FaMotorcycle size={23}/>}} />
               </td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
-              <td className="px-3 py-2 whitespace-nowrap">04/06/1262</td>
+              <td className="px-3 py-2 whitespace-nowrap">300</td>
             </tr>
 
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Laszlo Cravensworth
+                <User name="Livreur 1" description="19/10/1678" />
               </td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
 
-              <td className="px-3 py-2 whitespace-nowrap">19/10/1678</td>
-            </tr>
-
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">Nadja</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-
-              <td className="px-3 py-2 whitespace-nowrap">15/03/1593</td>
-            </tr>
-
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">Colin Robinson</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-
-              <td className="px-3 py-2 whitespace-nowrap">01/09/1971</td>
+              <td className="px-3 py-2 whitespace-nowrap">260</td>
             </tr>
 
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+              <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+
+              <td className="px-3 py-2 whitespace-nowrap">703</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">                <User name="Livreur 1" description="19/10/1678" />
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">90</td>
+
+              <td className="px-3 py-2 whitespace-nowrap">510</td>
+            </tr>
+
+            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <td className="px-3 py-2 whitespace-nowrap">
+                           <User name="Livreur 1" description="19/10/1678" />
+
+              </td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
             <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
               <td className="px-3 py-2 whitespace-nowrap">
-                Guillermo de la Cruz
+                           <User name="Livreur 1" description="19/10/1678" />
+
               </td>
-              <td className="px-3 py-2 whitespace-nowrap">18/11/1991</td>
+              <td className="px-3 py-2 whitespace-nowrap">10</td>
               <td className="px-3 py-2 whitespace-nowrap">90</td>
             </tr>
           </tbody>

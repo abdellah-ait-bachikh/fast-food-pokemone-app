@@ -31,7 +31,12 @@ const RankingProducts = () => {
             <AccordionItem
               key={e}
               aria-label={`Produits ${e}`}
-              title={`Produits ${e}`}
+              title={
+                <span className="flex flex-nowrap gap-2 items-center">
+                  <div className="w-6"><img className="w-full aspect-square" src="/images/poke_close.png" alt="" /></div>
+                  <span className="font-semibold">{`Produits ${e}`}</span>
+                </span>
+              }
             >
               {e} Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Iusto ratione temporibus voluptate libero, modi adipisci corrupti
