@@ -7,7 +7,10 @@ import { update } from "./update";
 
 const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const serverPath = "C:/Users/abdel/Desktop/projetcs/pc/pockemone-fastfood/server/dist/index.js";
+const isDev = !!process.env.VITE_DEV_SERVER_URL;
+const serverPath = isDev
+  ? path.resolve("C:/Users/abdel/Desktop/projetcs/pc/pockemone-fastfood/server/dist/index.js")
+  : path.join(path.dirname(app.getPath("exe")), "server", "dist", "index.js");
 const { startServer } = require(serverPath);
 
 process.env.APP_ROOT = path.join(__dirname, "../..");

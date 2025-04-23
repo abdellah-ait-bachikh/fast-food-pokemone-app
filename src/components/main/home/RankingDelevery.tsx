@@ -24,143 +24,28 @@ const RankingDelevery = () => {
               </th>
 
               <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
-              Montant Collecté (DH)
+                Montant Collecté (DH)
               </th>
             </tr>
           </thead>
 
           <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                <User name="Livreur 1" description="19/10/1678" avatarProps={{icon:<FaMotorcycle size={23}/>}} />
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-              <td className="px-3 py-2 whitespace-nowrap">300</td>
-            </tr>
-
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                <User name="Livreur 1" description="19/10/1678" />
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-
-              <td className="px-3 py-2 whitespace-nowrap">260</td>
-            </tr>
-
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-              <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-
-              <td className="px-3 py-2 whitespace-nowrap">703</td>
-            </tr>
-
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">                <User name="Livreur 1" description="19/10/1678" />
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-
-              <td className="px-3 py-2 whitespace-nowrap">510</td>
-            </tr>
-
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
-            <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
-              <td className="px-3 py-2 whitespace-nowrap">
-                           <User name="Livreur 1" description="19/10/1678" />
-
-              </td>
-              <td className="px-3 py-2 whitespace-nowrap">10</td>
-              <td className="px-3 py-2 whitespace-nowrap">90</td>
-            </tr>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+              <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+                <td className="px-3 py-2 whitespace-nowrap">
+                  <User
+                    name="Livreur 1"
+                    description="19/10/1678"
+                    avatarProps={{
+                      icon: <FaMotorcycle size={23} />,
+                      color: "warning",
+                    }}
+                  />
+                </td>
+                <td className="px-3 py-2 whitespace-nowrap">90</td>
+                <td className="px-3 py-2 whitespace-nowrap">300</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
