@@ -11,7 +11,7 @@ const isDev = !!process.env.VITE_DEV_SERVER_URL;
 const serverPath = isDev
   ? path.resolve("C:/Users/abdel/Desktop/projetcs/pc/pockemone-fastfood/server/dist/index.js")
   : path.join(path.dirname(app.getPath("exe")), "server", "dist", "index.js");
-const { startServer } = require(serverPath);
+// const { startServer } = require(serverPath);
 
 process.env.APP_ROOT = path.join(__dirname, "../..");
 
@@ -79,7 +79,7 @@ async function createWindow() {
 }
 
 app.whenReady().then(() => {
-  startServer();  // <-- run your Express server first
+  // startServer();  // <-- run your Express server first
   createWindow(); // <-- then open your Electron window
 });
 app.on("window-all-closed", () => {

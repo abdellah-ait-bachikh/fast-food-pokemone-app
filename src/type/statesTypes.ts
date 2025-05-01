@@ -1,4 +1,29 @@
+import store from "@/redux/store";
+
 export interface TinitialState {
-    isAsideOpen: boolean;
-    theme : "light" | "dark"
-  }
+  isAsideOpen: boolean;
+  theme: "light" | "dark";
+}
+export interface ThomeInitialState {
+  dashboardSummary: {
+    totalOrders: number; // Corresponds to "Commandes"
+    dineInOrders: number; // Corresponds to "Sur place"
+    deliveryOrders: number; // Corresponds to "Livraison"
+    totalRevenue: number; // Corresponds to "Total (DH)"
+  } | null;
+  error: string | null;
+  rankingProductsData: null | {
+    rankingProducts: {
+      id: number;
+      name: string;
+      category: {
+        name: string;
+        imageUri: string | null;
+      };
+      quantity: number;
+    }[];
+    shart: { labels: string[]; series: number[] };
+  };
+}
+
+export type AppDispatch = typeof store.dispatch;

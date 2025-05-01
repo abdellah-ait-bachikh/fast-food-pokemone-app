@@ -31,7 +31,7 @@ const RankingDelevery = () => {
 
           <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-              <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
+              <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white" key={item}>
                 <td className="px-3 py-2 whitespace-nowrap">
                   <User
                     name="Livreur 1"

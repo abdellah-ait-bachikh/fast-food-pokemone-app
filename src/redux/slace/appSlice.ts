@@ -19,5 +19,5 @@ const appSlice = createSlice({
   },
 });
 
-export const { setAsideOpen,setTheme } = appSlice.actions;
+export const { setAsideOpen, setTheme } = appSlice.actions;
 export const appReducer = appSlice.reducer;
