@@ -7,6 +7,7 @@ const initialState: ThomeInitialState = {
   rankingProductsData: null,
   rankingOffersData: null,
   rankingDeleverys: null,
+  mountlyPayments: null,
 };
 
 const homeSLice = createSlice({
@@ -41,6 +42,12 @@ const homeSLice = createSlice({
     ) {
       state.rankingDeleverys = action.payload;
     },
+    setMountlyPayments(
+      state,
+      action: PayloadAction<ThomeInitialState["mountlyPayments"]>
+    ) {
+      state.mountlyPayments = action.payload;
+    },
   },
 });
 
@@ -48,6 +55,7 @@ export const {
   setDashboardSummary,
   setError,
   setRankingProductsData,
-  setRankingOffersData,setRankingDeleverys
+  setRankingOffersData,
+  setRankingDeleverys,setMountlyPayments
 } = homeSLice.actions;
 export const homeReducer = homeSLice.reducer;

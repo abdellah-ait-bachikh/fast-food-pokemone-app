@@ -2,12 +2,51 @@ import React, { useEffect } from "react";
 import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts"; // Importing ApexOptions for correct typing
 import { useSelector } from "react-redux";
-import { TinitialState } from "@/type/statesTypes";
+import { ThomeInitialState, TinitialState } from "@/type/statesTypes";
 
 const MountlyPaymentsShart: React.FC = () => {
   const { theme, isAsideOpen } = useSelector(
     (state: { app: TinitialState }) => state.app
   );
+  const { mountlyPayments } = useSelector(
+    (state: { home: ThomeInitialState }) => state.home
+  );
+  const formattedSeries = React.useMemo(() => {
+    if (!mountlyPayments) {
+      return [
+        {
+          name: "Recettes en argent",
+          data: Array(12).fill(0),
+        },
+        {
+          name: "Nombre de commandes",
+          data: Array(12).fill(0),
+        },
+      ];
+    }
+
+    const totals = Array(12).fill(0);
+    const counts = Array(12).fill(0);
+
+    mountlyPayments.forEach(
+      (item: { month: number; total: number; count: number }) => {
+        totals[item.month] = item.total;
+        counts[item.month] = item.count;
+      }
+    );
+
+    return [
+      {
+        name: "Recettes en argent",
+        data: totals,
+      },
+      {
+        name: "Nombre de commandes",
+        data: counts,
+      },
+    ];
+  }, [mountlyPayments]);
+
   const options: ApexOptions = {
     chart: {
       type: "area",
@@ -99,31 +138,35 @@ const MountlyPaymentsShart: React.FC = () => {
     },
   };
 
-  const series = [
-    {
-      name: "Recettes en argent",
-      data: [
-        1500, 2500, 1800, 3000, 2000, 2300, 2900, 3200, 3500, 4000, 3800, 4200,
-      ],
-    },
-    {
-      name: "Nombre de commandes",
-      data: [500, 600, 550, 700, 650, 800, 900, 1000, 1100, 1200, 1300, 1400],
-    },
-  ];
+  // const series = [
+  //   {
+  //     name: "Recettes en argent",
+  //     data: [
+  //       1500, 2500, 1800, 3000, 2000, 2300, 2900, 3200, 3500, 4000, 3800, 4200,
+  //     ],
+  //   },
+  //   {
+  //     name: "Nombre de commandes",
+  //     data: [500, 600, 550, 700, 650, 800, 900, 1000, 1100, 1200, 1300, 1400],
+  //   },
+  // ];
   useEffect(() => {
     window.dispatchEvent(new Event("resize"));
   }, [isAsideOpen]);
   return (
-    <div className="mt-6 rounded-lg  w-full grid grid-cols-1 ">
-      <Chart
-        options={options}
-        series={series}
-        type="area"
-        height={450}
-        width="100%"
-        />
-    </div>
+    <>
+      {formattedSeries && (
+        <div className="mt-6 rounded-lg  w-full grid grid-cols-1 ">
+          <Chart
+            options={options}
+            series={formattedSeries}
+            type="area"
+            height={450}
+            width="100%"
+          />
+        </div>
+      )}
+    </>
   );
 };
 

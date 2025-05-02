@@ -3,6 +3,7 @@ import { Dispatch } from "@reduxjs/toolkit";
 import {
   setDashboardSummary,
   setError,
+  setMountlyPayments,
   setRankingDeleverys,
   setRankingOffersData,
   setRankingProductsData,
@@ -20,12 +21,14 @@ export const fetchHomeData = async (
       dispatch(getRankingProductsData()),
       dispatch(getRankingOffersData()),
       dispatch(getRankingDeleverys()),
+      dispatch(getMountlyPayments()),
     ]);
   } catch (error) {
     dispatch(setDashboardSummary(null));
     dispatch(setRankingProductsData(null));
     dispatch(setRankingOffersData(null));
     dispatch(setRankingDeleverys(null));
+    dispatch(setMountlyPayments(null));
 
     if (axios.isAxiosError(error)) {
       if (error.response) {
@@ -96,6 +99,16 @@ export const getRankingDeleverys =
     const res = await request.get(`/home/top-ranking-deleverys`);
     if (res.status === 200) {
       dispatch(setRankingDeleverys(res.data));
+      cb && cb();
+    }
+  };
+export const getMountlyPayments =
+  (cb?: () => void) => async (dispatch: Dispatch) => {
+    // await new Promise((resolve) => setTimeout(resolve, 5000));
+
+    const res = await request.get(`/home/mountly-payments`);
+    if (res.status === 200) {
+      dispatch(setMountlyPayments(res.data));
       cb && cb();
     }
   };

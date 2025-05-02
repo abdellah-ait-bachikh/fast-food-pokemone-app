@@ -33,13 +33,22 @@ export interface ThomeInitialState {
         imageUri: string | null;
         createdAt: string;
       }[];
-  rankingDeleverys:null | {
-    id: number;
-    useName: string;
-    createdAt: string;
-    totalPayments: number;
-    totaleMoney: number;
-  }[];
+  rankingDeleverys:
+    | null
+    | {
+        id: number;
+        useName: string;
+        createdAt: string;
+        totalPayments: number;
+        totaleMoney: number;
+      }[];
+  mountlyPayments:
+    | null
+    | {
+        month: number;
+        total: number;
+        count: number;
+      }[];
 }
 
 export type AppDispatch = typeof store.dispatch;
