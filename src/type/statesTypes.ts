@@ -24,6 +24,22 @@ export interface ThomeInitialState {
     }[];
     shart: { labels: string[]; series: number[] };
   };
+  rankingOffersData:
+    | null
+    | {
+        id: number;
+        name: string;
+        quantity: number;
+        imageUri: string | null;
+        createdAt: string;
+      }[];
+  rankingDeleverys:null | {
+    id: number;
+    useName: string;
+    createdAt: string;
+    totalPayments: number;
+    totaleMoney: number;
+  }[];
 }
 
 export type AppDispatch = typeof store.dispatch;

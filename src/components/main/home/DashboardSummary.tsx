@@ -13,21 +13,10 @@ const DashboardSummary = () => {
   const { dashboardSummary } = useSelector(
     (state: { home: ThomeInitialState }) => state.home
   );
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    dispatch(
-      getDashboardSummary(() => {
-        setIsLoading(false);
-      })
-    );
-  }, []);
+ 
   return (
     <>
-      {isLoading ? (
-        <div className="w-full flex justify-center py-4">
-          <Spinner size="lg" />
-        </div>
-      ) : (
+      {
         dashboardSummary && (
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
             <Tooltip
@@ -112,14 +101,14 @@ const DashboardSummary = () => {
                 <div className="w-full">
                   <h3 className="text-lg font-semibold">Total (DH)</h3>
                   <p className="text-2xl font-bold mt-2">
-                    {formatNumberShort(dashboardSummary.totalRevenue)}
+                    {formatMoneyMAD(formatNumberShort(dashboardSummary.totalRevenue)) }
                   </p>
                 </div>
               </div>
             </Tooltip>
           </div>
         )
-      )}
+      }
     </>
   );
 };

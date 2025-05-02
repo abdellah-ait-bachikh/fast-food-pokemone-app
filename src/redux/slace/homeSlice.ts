@@ -5,6 +5,8 @@ const initialState: ThomeInitialState = {
   dashboardSummary: null,
   error: null,
   rankingProductsData: null,
+  rankingOffersData: null,
+  rankingDeleverys: null,
 };
 
 const homeSLice = createSlice({
@@ -27,8 +29,25 @@ const homeSLice = createSlice({
     ) {
       state.rankingProductsData = action.payload;
     },
+    setRankingOffersData(
+      state,
+      action: PayloadAction<ThomeInitialState["rankingOffersData"]>
+    ) {
+      state.rankingOffersData = action.payload;
+    },
+    setRankingDeleverys(
+      state,
+      action: PayloadAction<ThomeInitialState["rankingDeleverys"]>
+    ) {
+      state.rankingDeleverys = action.payload;
+    },
   },
 });
 
-export const { setDashboardSummary, setError,setRankingProductsData } = homeSLice.actions;
+export const {
+  setDashboardSummary,
+  setError,
+  setRankingProductsData,
+  setRankingOffersData,setRankingDeleverys
+} = homeSLice.actions;
 export const homeReducer = homeSLice.reducer;
