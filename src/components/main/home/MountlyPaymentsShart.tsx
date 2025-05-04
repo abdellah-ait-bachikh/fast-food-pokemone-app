@@ -138,18 +138,6 @@ const MountlyPaymentsShart: React.FC = () => {
     },
   };
 
-  // const series = [
-  //   {
-  //     name: "Recettes en argent",
-  //     data: [
-  //       1500, 2500, 1800, 3000, 2000, 2300, 2900, 3200, 3500, 4000, 3800, 4200,
-  //     ],
-  //   },
-  //   {
-  //     name: "Nombre de commandes",
-  //     data: [500, 600, 550, 700, 650, 800, 900, 1000, 1100, 1200, 1300, 1400],
-  //   },
-  // ];
   useEffect(() => {
     window.dispatchEvent(new Event("resize"));
   }, [isAsideOpen]);

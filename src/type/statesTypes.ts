@@ -31,14 +31,14 @@ export interface ThomeInitialState {
         name: string;
         quantity: number;
         imageUri: string | null;
-        createdAt: string;
+        createdAt: Date;
       }[];
   rankingDeleverys:
     | null
     | {
         id: number;
         useName: string;
-        createdAt: string;
+        createdAt: Date;
         totalPayments: number;
         totaleMoney: number;
       }[];
@@ -51,4 +51,8 @@ export interface ThomeInitialState {
       }[];
 }
 
+export interface TdayInitialState {
+  currentDay: null | { id: number; startAt: Date; stopAt: Date };
+  error: null | string;
+}
 export type AppDispatch = typeof store.dispatch;
