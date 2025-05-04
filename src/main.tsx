@@ -15,7 +15,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     >
       <Provider store={store}>
         <App />
-        <ToastProvider placement="top-center" toastProps={{ timeout: 5000 }} />
+        <div className="z-[999]"> <ToastProvider placement="top-right" toastProps={{ timeout: 5000, classNames: { base: 'z-[999]' } }} />
+        </div>
       </Provider>
     </HeroUIProvider>
   </React.StrictMode>
