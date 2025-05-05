@@ -46,7 +46,7 @@ export const createDay =
   (cb?: () => void | undefined, setLoading?: (value: boolean) => void) =>
   async (dispatch: AppDispatch) => {
     setLoading && setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    // await new Promise((resolve) => setTimeout(resolve, 5000));
     try {
       const res = await request.post("/days");
       if (res.status === 201) {
@@ -92,7 +92,7 @@ export const stopDay =
   ) =>
   async (dispatch: AppDispatch) => {
     setLoading && setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    // await new Promise((resolve) => setTimeout(resolve, 5000));
     try {
       if (id === null) {
         addToast({

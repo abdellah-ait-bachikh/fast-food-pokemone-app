@@ -68,3 +68,27 @@ export const getDateDifferenceInFrench = (date: Date): string => {
 
   return `${diffYears} ${diffYears === 1 ? "an" : "ans"}`;
 };
+
+export const getTimeDeferent = (date: Date) => {
+  const target = new Date(date);
+  const now = new Date();
+  const diffMs = Math.abs(now.getTime() - target.getTime());
+  const diffS = Math.floor(diffMs / 1000);
+  const diffM = Math.floor(diffMs / (1000 * 60));
+  const diffH = Math.floor(diffMs / (1000 * 60 * 60));
+  const diffD = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  if (diffS < 60) {
+    return `${diffS} s`;
+  } else if (diffM < 60) {
+    return `${diffM} m`;
+  } else if (diffH < 60) {
+    return `${diffH} h`;
+  } else {
+    return `${diffD} j`;
+  }
+};
+
+export const getFullTime = (date:Date)=>{
+  const cureentDate = new Date(date)
+return `${cureentDate.getHours()}h ${cureentDate.getMinutes()}m ${cureentDate.getSeconds()}s`
+}

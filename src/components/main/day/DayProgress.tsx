@@ -21,9 +21,11 @@ const DayProgress = () => {
                 <div className='w-full text-center mt-3' >
                     <Button isLoading={isLoading} size='lg' className='font-semibold' color='warning' variant='flat' onPress={handelStartDay}>DemaréJournée</Button>
                 </div> :
-                <div className='w-full text-center mt-3' >
-                    <Crone startAt={currentDay.startAt}/>
-                    <Button isLoading={isLoading} size='lg' className='font-semibold' color='danger' variant='flat' onPress={handelStopDay}>Stope Journée</Button>
+                <div className='w-full flex items-center justify-center mt-3' >
+                    <div className='rounded-2xl bg-white dark:bg-slate-900 p-4 w-fit'>
+                        <Crone startAt={currentDay.startAt} />
+                        <Button isLoading={isLoading} size='lg' className='font-semibold mt-2' fullWidth color='danger' variant='flat' onPress={handelStopDay}>Stope Journée</Button>
+                    </div>
                 </div>) :
             <div className='w-full text-center mt-3' >
                 <Button isLoading={isLoading} size='lg' className='font-semibold' color='warning' variant='flat' onPress={handelStartDay}>DemaréJournée</Button>
