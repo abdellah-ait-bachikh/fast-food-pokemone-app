@@ -13,9 +13,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       locale="fr-FR"
       className="w-full min-h-screen overflow-clip bg-white dark:bg-slate-900  flex justify-start items-start z-[999] "
     >
-      <Provider store={store}>
+      <Provider store={store} >
         <App />
-        <div className="z-[999]"> <ToastProvider placement="top-right" toastProps={{ timeout: 5000, classNames: { base: 'z-[999]' } }} />
+        <div className="z-[9999]"> <ToastProvider placement="top-right" toastProps={{ timeout: 5000, classNames: { base: 'z-[9999]' } }} />
         </div>
       </Provider>
     </HeroUIProvider>

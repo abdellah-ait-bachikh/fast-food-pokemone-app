@@ -52,6 +52,10 @@
   @apply text-black dark:text-white;
 }
 
+#root{
+  @apply z-[99999] overflow-clip relative;
+}
+
 a.active {
   @apply bg-amber-500 border-gray-200 dark:bg-slate-800 dark:border-gray-200 rounded-3xl transition-all duration-700 ease-in-out;
 }

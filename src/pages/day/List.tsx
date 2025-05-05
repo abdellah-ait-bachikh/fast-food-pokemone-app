@@ -1,4 +1,5 @@
 import DayProgress from '@/components/main/day/DayProgress'
+import Table from '@/components/main/day/Table'
 import { fetchDayData } from '@/redux/api/day.api'
 import { TdayInitialState } from '@/type/statesTypes'
 import { Alert, Spinner } from '@heroui/react'
@@ -27,6 +28,7 @@ const List = () => {
             </div> : <div className='w-full'>
                 <h1 className='text-4xl font-semibold'>List De Journée</h1>
                 <DayProgress />
+                <Table/>
             </div>)
     }</>
     )
