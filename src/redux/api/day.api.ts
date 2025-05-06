@@ -142,20 +142,23 @@ export const stopDay =
 export const getDaysWithPaymentsCount =
   (
     setLoading: (value: boolean) => void,
-    { startAt, rowsPerPage,page }: { startAt: Date | undefined; rowsPerPage: string,page:number | '' },
+    {
+      startAt,
+      rowsPerPage,
+      page,
+    }: { startAt: Date | undefined; rowsPerPage: string; page: number | "" },
     cb?: () => void | undefined
   ) =>
   async (dispatch: AppDispatch) => {
     try {
-      
       setLoading(true);
       // await new Promise(resolve=>setTimeout(resolve,1000))
       const res = await request.get(
         `/days/count-payments?startAt=${startAt}&rowsPerPage=${rowsPerPage}&page=${page}`
       );
-      if(res.status ===200){
-        dispatch(setDays(res.data))
-        console.log(res)
+      if (res.status === 200) {
+        dispatch(setDays(res.data));
+        console.log(res);
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
