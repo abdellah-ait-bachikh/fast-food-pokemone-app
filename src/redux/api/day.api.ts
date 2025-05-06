@@ -149,12 +149,13 @@ export const getDaysWithPaymentsCount =
     try {
       
       setLoading(true);
-      await new Promise(resolve=>setTimeout(resolve,1000))
+      // await new Promise(resolve=>setTimeout(resolve,1000))
       const res = await request.get(
         `/days/count-payments?startAt=${startAt}&rowsPerPage=${rowsPerPage}&page=${page}`
       );
       if(res.status ===200){
-        dispatch(setDays(res.data.days))
+        dispatch(setDays(res.data))
+        console.log(res)
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
