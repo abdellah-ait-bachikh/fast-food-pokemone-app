@@ -1,7 +1,11 @@
 import { TdayInitialState } from "@/type/statesTypes";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: TdayInitialState = { currentDay: null, error: null };
+const initialState: TdayInitialState = {
+  currentDay: null,
+  error: null,
+  days: [],
+};
 const daySlice = createSlice({
   name: "day",
   initialState,
@@ -15,8 +19,11 @@ const daySlice = createSlice({
     setError(state, action: PayloadAction<TdayInitialState["error"]>) {
       state.error = action.payload;
     },
+    setDays(state, action: PayloadAction<TdayInitialState["days"]>) {
+      state.days = action.payload;
+    },
   },
 });
 
-export const { setCurrentDay, setError } = daySlice.actions;
+export const { setCurrentDay, setError,setDays } = daySlice.actions;
 export const DayReducer = daySlice.reducer;

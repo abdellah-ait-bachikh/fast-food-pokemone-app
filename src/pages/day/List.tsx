@@ -15,7 +15,7 @@ const List = () => {
     }, [])
     return (<>{
         isLoading ?
-            <div className='w-full h-screen grid place-items-center'>
+            <div className='w-full  grid place-items-center'>
                 <Spinner size='lg' color='warning' />
             </div> :
             (error ? <div className="w-full text-white">

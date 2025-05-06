@@ -1,5 +1,5 @@
 import { Dispatch } from "@reduxjs/toolkit";
-import { setCurrentDay, setError } from "../slace/daySlice";
+import { setCurrentDay, setDays, setError } from "../slace/daySlice";
 import { request } from "@/lib/utils";
 import axios from "axios";
 import { AppDispatch } from "@/type/statesTypes";
@@ -136,5 +136,43 @@ export const stopDay =
       }
     } finally {
       setLoading && setLoading(false);
+    }
+  };
+
+export const getDaysWithPaymentsCount =
+  (
+    setLoading: (value: boolean) => void,
+    { startAt, rowsPerPage,page }: { startAt: Date | undefined; rowsPerPage: string,page:number | '' },
+    cb?: () => void | undefined
+  ) =>
+  async (dispatch: AppDispatch) => {
+    try {
+      
+      setLoading(true);
+      await new Promise(resolve=>setTimeout(resolve,1000))
+      const res = await request.get(
+        `/days/count-payments?startAt=${startAt}&rowsPerPage=${rowsPerPage}&page=${page}`
+      );
+      if(res.status ===200){
+        dispatch(setDays(res.data.days))
+      }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          if (error.response.status === 404) {
+            dispatch(setError("Données non trouvées."));
+          } else {
+            dispatch(
+              setError(error.response.data.message || "Erreur serveur.")
+            );
+          }
+        } else {
+          dispatch(setError("Erreur réseau : aucune réponse du serveur"));
+        }
+      } else {
+        dispatch(setError("Erreur inconnue"));
+      }
+    } finally {
+      setLoading(false);
     }
   };

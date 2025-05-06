@@ -54,5 +54,6 @@ export interface ThomeInitialState {
 export interface TdayInitialState {
   currentDay: null | { id: number; startAt: Date; stopAt: Date };
   error: null | string;
+  days:{id:number,startAt:Date,stopAt:Date | null,_count:{payments:number,paymentsProducts:number,paymentsOffers:number}}[] | [];
 }
 export type AppDispatch = typeof store.dispatch;

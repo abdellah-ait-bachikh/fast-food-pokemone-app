@@ -92,3 +92,21 @@ export const getFullTime = (date:Date)=>{
   const cureentDate = new Date(date)
 return `${cureentDate.getHours()}h ${cureentDate.getMinutes()}m ${cureentDate.getSeconds()}s`
 }
+
+export function formatDateWithTime(date: Date | null): string {
+  // console.log(date)
+  if (date===null) {
+    return 'encour';
+  }
+  const parsDate = new Date(date)
+
+  const day = String(parsDate.getDate()).padStart(2, '0');
+  const month = String(parsDate.getMonth() + 1).padStart(2, '0');
+  const year = parsDate.getFullYear();
+
+  const hours = String(parsDate.getHours()).padStart(2, '0');
+  const minutes = String(parsDate.getMinutes()).padStart(2, '0');
+
+  return `${day}/${month}/${year} à ${hours}:${minutes}`;
+}
+
