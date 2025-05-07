@@ -48,13 +48,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  text-decoration: none;
-  @apply text-black dark:text-white;
 }
 
 #root{
-  @apply z-[99999] overflow-clip relative;
+  @apply z-[99999] overflow-clip relative text-black dark:text-white;
 }
 
 a.active {

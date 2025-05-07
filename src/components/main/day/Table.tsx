@@ -7,6 +7,7 @@ import { FiEye } from "react-icons/fi";
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { FaRegTrashAlt } from "react-icons/fa";
+import { LuTrash2 } from "react-icons/lu";
 
 const Table = () => {
     const dispatch = useDispatch<AppDispatch>()
@@ -66,11 +67,11 @@ const Table = () => {
                             <td className='text-center py-1.5 w-fit text-nowrap px-3'>{formatDateWithTime(item.stopAt)}</td>
                             <td className='text-center py-1.5 w-fit text-nowrap px-3'>{item._count.payments}</td>
                             <td className='text-center py-1.5 w-fit text-nowrap px-3'>{item._count.paymentsProducts}</td>
-                            <td className='text-center py-1.5 w-fit text-nowrap px-3'>{item._count.paymentsOffers}</td>
+                            <td className='text-center py-1.5 w-fit text-nowrap px-3 '>{item._count.paymentsOffers}</td>
                             <td className='py-1.5'>
-                                <div className='flex items-center gap-2 justify-center'>
-                                    <Button as={Link} to={`/days/show/${item.id}`} color='primary' isIconOnly variant='ghost' size='sm' radius='lg' ><FiEye size={18} /></Button>
-                                    <Button color='danger' isIconOnly variant='ghost' size='sm' radius='lg'><FaRegTrashAlt size={18} /></Button>
+                                <div className='flex items-center gap-2 justify-center text-[none]'>
+                                    <Button aria-label="show" as={Link} to={`/days/show/${item.id}`} isIconOnly color='primary'  variant='ghost' size='sm' radius='lg' ><FiEye  size={18} /></Button>
+                                    <Button aria-label="delete"   color='danger' isIconOnly variant='ghost' size='sm' radius='lg'><LuTrash2  size={18} /></Button>
                                 </div>
                             </td>
                         </tr>)) : <tr><td colSpan={7}>aucain journéé trover</td></tr>)}
