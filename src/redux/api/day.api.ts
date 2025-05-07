@@ -1,5 +1,5 @@
 import { Dispatch } from "@reduxjs/toolkit";
-import { setCurrentDay, setDays, setError } from "../slace/daySlice";
+import { setCurrentDay, setDays, setError, setShowDay } from "../slace/daySlice";
 import { request } from "@/lib/utils";
 import axios from "axios";
 import { AppDispatch } from "@/type/statesTypes";
@@ -186,7 +186,9 @@ export const getShowDay =
     setLoading(true);
     try {
       const res = await request.get(`/days/show/${id}`);
-      console.log(res);
+      if(res.status ===200){
+       dispatch(setShowDay(res.data))
+      }
     } catch (error) {
       if (axios.isAxiosError(error)) {
         if (error.response) {
