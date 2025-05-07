@@ -3,9 +3,10 @@ import { getDaysWithPaymentsCount } from '@/redux/api/day.api'
 import { AppDispatch, TdayInitialState } from '@/type/statesTypes'
 import { Button, DatePicker, DateValue, Pagination, Select, SelectItem, Spinner, } from '@heroui/react'
 import { useEffect, useState } from 'react'
-import { BsEye } from 'react-icons/bs'
+import { FiEye } from "react-icons/fi";
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { FaRegTrashAlt } from "react-icons/fa";
 
 const Table = () => {
     const dispatch = useDispatch<AppDispatch>()
@@ -68,8 +69,8 @@ const Table = () => {
                             <td className='text-center py-1.5 w-fit text-nowrap px-3'>{item._count.paymentsOffers}</td>
                             <td className='py-1.5'>
                                 <div className='flex items-center gap-2 justify-center'>
-                                    <Button as={Link} to={`/days/show/${item.id}`} color='primary' isIconOnly variant='ghost' size='sm' radius='lg' ><span className='text-primary'><BsEye size={18} /></span></Button>
-                                    <Button color='danger' isIconOnly variant='ghost' size='sm' radius='lg'><span><BsEye className='text-danger' size={18} /></span></Button>
+                                    <Button as={Link} to={`/days/show/${item.id}`} color='primary' isIconOnly variant='ghost' size='sm' radius='lg' ><FiEye size={18} /></Button>
+                                    <Button color='danger' isIconOnly variant='ghost' size='sm' radius='lg'><FaRegTrashAlt size={18} /></Button>
                                 </div>
                             </td>
                         </tr>)) : <tr><td colSpan={7}>aucain journéé trover</td></tr>)}

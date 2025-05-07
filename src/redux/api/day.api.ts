@@ -158,7 +158,6 @@ export const getDaysWithPaymentsCount =
       );
       if (res.status === 200) {
         dispatch(setDays(res.data));
-        console.log(res);
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
