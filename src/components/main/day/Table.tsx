@@ -49,7 +49,7 @@ const Table = () => {
 
             {loading ? <div className='w-full flex items-center justify-center py-4'><Spinner size='lg' color='warning' /></div> : <div className='rounded-xl w-full bg-white dark:bg-slate-900 p-2.5 mt-4  max-h-[60vh] flex flex-col gap-3'>
                 <div className='w-full flex-1 overflow-auto'>  <table className='w-full'>
-                    <thead className='sticky top-0 bg-transparent backdrop-blur-lg'>
+                    <thead className='sticky top-0 bg-transparent backdrop-blur-lg z-[900]'>
                         <tr  >
                             <th className='font-semibold text-left py-1.5 w-fit text-nowrap px-3'>N</th>
                             <th className='font-semibold text-center py-1.5 w-fit text-nowrap px-3'>Depart</th>
@@ -69,12 +69,12 @@ const Table = () => {
                             <td className='text-center py-1.5 w-fit text-nowrap px-3'>{item._count.paymentsProducts}</td>
                             <td className='text-center py-1.5 w-fit text-nowrap px-3 '>{item._count.paymentsOffers}</td>
                             <td className='py-1.5'>
-                                <div className='flex items-center gap-2 justify-center text-[none]'>
-                                    <Button aria-label="show" as={Link} to={`/days/show/${item.id}`} isIconOnly color='primary'  variant='ghost' size='sm' radius='lg' ><FiEye  size={18} /></Button>
-                                    <Button aria-label="delete"   color='danger' isIconOnly variant='ghost' size='sm' radius='lg'><LuTrash2  size={18} /></Button>
+                                <div className='flex items-center gap-2 justify-center text-[none] z-[899]'>
+                                    <Button aria-label="show" as={Link} to={`/days/show/${item.id}`} isIconOnly color='primary' variant='ghost' size='sm' radius='lg' ><FiEye size={18} /></Button>
+                                    <Button aria-label="delete" color='danger' isIconOnly variant='ghost' size='sm' radius='lg'><LuTrash2 size={18} /></Button>
                                 </div>
                             </td>
-                        </tr>)) : <tr><td colSpan={7}>aucain journéé trover</td></tr>)}
+                        </tr>)) : <tr><td colSpan={7} className='text-center pt-3 text-danger'>Aucune journée n'a été trouvée.</td></tr>)}
 
                     </tbody>
                     <tfoot></tfoot>

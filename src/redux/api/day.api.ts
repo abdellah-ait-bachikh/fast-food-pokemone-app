@@ -179,3 +179,31 @@ export const getDaysWithPaymentsCount =
       setLoading(false);
     }
   };
+
+export const getShowDay =
+  (id: string | undefined, setLoading: (value: boolean) => void, cb?: () => void) =>
+  async (dispatch: AppDispatch) => {
+    setLoading(true);
+    try {
+      const res = await request.get(`/days/show/${id}`);
+      console.log(res);
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          if (error.response.status === 404) {
+            dispatch(setError("Données non trouvées."));
+          } else {
+            dispatch(
+              setError(error.response.data.message || "Erreur serveur.")
+            );
+          }
+        } else {
+          dispatch(setError("Erreur réseau : aucune réponse du serveur"));
+        }
+      } else {
+        dispatch(setError("Erreur inconnue"));
+      }
+    } finally {
+      setLoading(false);
+    }
+  };

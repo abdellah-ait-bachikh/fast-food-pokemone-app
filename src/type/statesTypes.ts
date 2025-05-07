@@ -54,12 +54,89 @@ export interface ThomeInitialState {
 export interface TdayInitialState {
   currentDay: null | { id: number; startAt: Date; stopAt: Date };
   error: null | string;
-  days:{id:number,startAt:Date,stopAt:Date | null,_count:{payments:number,paymentsProducts:number,paymentsOffers:number}}[] | [];
+  days:
+    | {
+        id: number;
+        startAt: Date;
+        stopAt: Date | null;
+        _count: {
+          payments: number;
+          paymentsProducts: number;
+          paymentsOffers: number;
+        };
+      }[]
+    | [];
   pagination: {
     total: number;
     currentPage: number;
     rowsPerPage: number;
     totalPages: number;
-  } | null
+  } | null;
+  showDay: null | {
+    id: string;
+    startAt: Date;
+    stopeAt: Date | null;
+    paymentsOffers: {
+      include: {
+        delevry: {
+          select: {
+            userName: true;
+          };
+        };
+        detailsOffer: {
+          select: {
+            id: true;
+            quantity: true;
+            offer: {
+              select: {
+                name: true;
+                price: true;
+                imageUri: true;
+              };
+            };
+            totalePrice: true;
+          };
+        };
+      };
+    };
+    paymentsProducts: {
+      include: {
+        delevry: {
+          select: {
+            userName: true;
+          };
+        };
+        detailsProducts: {
+          select: {
+            id: true;
+            quantity: true;
+            product: {
+              select: {
+                name: true;
+                price: true;
+                category: {
+                  select: {
+                    name: true;
+                    imageUri: true;
+                  };
+                };
+              };
+            };
+            totalePrice: true;
+          };
+        };
+      };
+    };
+    deleverys: {
+      id: number;
+      _count: {
+        ordersProducts: number;
+        ordersOffers: number;
+      };
+      userName: string;
+      phone: string;
+      role: "admin" | "livreur";
+    }[];
+  };
 }
 export type AppDispatch = typeof store.dispatch;

@@ -4,7 +4,9 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const initialState: TdayInitialState = {
   currentDay: null,
   error: null,
-  days: [],pagination:null
+  days: [],
+  pagination: null,
+  showDay: null,
 };
 const daySlice = createSlice({
   name: "day",
@@ -22,10 +24,13 @@ const daySlice = createSlice({
     setDays(state, action: PayloadAction<TdayInitialState>) {
       state.days = action.payload.days;
       state.pagination = action.payload.pagination;
-
+    },
+    setShowDay(state, action: PayloadAction<TdayInitialState["showDay"]>) {
+      state.showDay = action.payload;
     },
   },
 });
 
-export const { setCurrentDay, setError,setDays } = daySlice.actions;
+export const { setCurrentDay, setError, setDays, setShowDay } =
+  daySlice.actions;
 export const DayReducer = daySlice.reducer;
