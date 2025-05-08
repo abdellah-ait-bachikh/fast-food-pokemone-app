@@ -75,7 +75,7 @@ export interface TdayInitialState {
   showDay: null | {
     id: string;
     startAt: Date;
-    stopeAt: Date | null;
+    stopAt: Date | null;
     paymentsOffers: {
       include: {
         delevry: {
