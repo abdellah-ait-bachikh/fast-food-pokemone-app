@@ -87,12 +87,12 @@ const Show = () => {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={4}>
-                      <div className="w-full text-center py-8">  Aucun Livreur trouvé</div>
+                    <td colSpan={5}>
+                      <div className="w-full text-center py-8 text-danger">  Aucun Livreur trouvé</div>
                     </td>
                   </tr>
                 )}
-              
+
               </tbody>
             </table> </div>
         </div>
