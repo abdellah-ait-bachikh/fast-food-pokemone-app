@@ -136,6 +136,8 @@ export interface TdayInitialState {
       userName: string;
       phone: string;
       role: "admin" | "livreur";
+      totalEarnings:number;
+      totalDeleveryPrice:number;
     }[];
   };
 }
