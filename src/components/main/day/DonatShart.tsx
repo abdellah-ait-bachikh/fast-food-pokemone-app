@@ -14,7 +14,7 @@ const DonatShart = () => {
         },
     };
 
-    const series: ApexAxisChartSeries = [20, 90];
+    const series: ApexNonAxisChartSeries = [20, 90];
 
     return (
         <div className="p-2 flex justify-center">
