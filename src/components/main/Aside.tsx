@@ -2,7 +2,7 @@ import { links } from "@/lib/const";
 import { setAsideOpen } from "@/redux/slace/appSlice";
 import { TinitialState } from "@/type/statesTypes";
 import classNames from "classnames";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { CiLogout } from "react-icons/ci";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -14,7 +14,17 @@ const Aside = () => {
   const { isAsideOpen } = useSelector(
     (state: { app: TinitialState }) => state.app
   );
-
+  const ref = useRef<null | HTMLDivElement>()
+  useEffect(() => {
+    const removeScrole = () => {
+      if (isAsideOpen) {
+        document.body.classList.add('overflow-y-hidden', 'md:overflow-y-auto')
+      } else {
+        document.body.classList.remove('overflow-y-hidden', 'md:overflow-y-auto')
+      }
+    }
+    removeScrole()
+  }, [isAsideOpen])
   return (
     <div
       className={classNames(
@@ -25,7 +35,7 @@ const Aside = () => {
         }
       )}
     >
-      <div className="w-full h-full flex flex-col items-center p-4 relative">
+      <div className="w-full h-full flex flex-col gap-5 items-center p-4  relative ">
         <div
           className={classNames("transition-width", {
             "w-[55px]": !isAsideOpen,
@@ -64,7 +74,7 @@ const Aside = () => {
             </div>
           ))}
         </div>
-        <div className="w-full flex flex-col gap-3 mt-6">
+        <div className="w-full flex flex-col gap-2 ">
           <div className="w-full ">
             <NavLink
               to="/settings"
@@ -110,6 +120,7 @@ const Aside = () => {
               </span>
             </button>
           </div>
+          <div className="w-full my-1"></div>
         </div>
       </div>
     </div>
