@@ -16,19 +16,16 @@ const Aside = () => {
   );
   const ref = useRef<null | HTMLDivElement>()
   useEffect(() => {
-    const removeScrole = () => {
-      if (isAsideOpen) {
-        document.body.classList.add('overflow-y-hidden', 'md:overflow-y-auto')
-      } else {
-        document.body.classList.remove('overflow-y-hidden', 'md:overflow-y-auto')
-      }
+    if (isAsideOpen) {
+      document.body.classList.add('overflow-y-hidden', 'md:overflow-y-auto')
+    } else {
+      document.body.classList.remove('overflow-y-hidden', 'md:overflow-y-auto')
     }
-    removeScrole()
   }, [isAsideOpen])
   return (
     <div
       className={classNames(
-        "fixed md:sticky top-0 left-0   h-screen overflow-hidden overflow-y-auto transition-width backdrop-blur-md   bg-amber-500/60 dark:bg-slate-900 z-[999]",
+        "fixed md:sticky top-0 left-0 h-screen overflow-hidden overflow-y-auto transition-width backdrop-blur-md   bg-amber-500/60 dark:bg-slate-900 z-[999]",
         {
           "w-full md:w-[220px]": isAsideOpen,
           "w-0 md:w-[72px]": !isAsideOpen,
