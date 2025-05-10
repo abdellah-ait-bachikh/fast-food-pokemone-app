@@ -2,19 +2,19 @@ import { ApexOptions } from 'apexcharts';
 import React from 'react'
 import Chart from "react-apexcharts";
 
-const DonatShart = () => {
+const DonatShart = ({data}:{data:{labels:string[],series:number[]}}) => {
     const options: ApexOptions = {
         chart: {
             type: "donut",
         },
-        labels: ['fromage', "thone",],
+        labels: data.labels,
         // colors: ["#22c55e", "#3b82f6", "#f97316"],
         legend: {
-            position: "bottom",
+            show: false,
         },
     };
 
-    const series: ApexNonAxisChartSeries = [20, 90];
+    const series: ApexNonAxisChartSeries = data.series;
 
     return (
         <div className="p-2 flex justify-center">
