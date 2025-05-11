@@ -20,7 +20,7 @@ const RankingProducts = () => {
     labels: rankingProductsData ? rankingProductsData?.shart?.labels : [],
     // colors: ["#22c55e", "#3b82f6", "#f97316"],
     legend: {
-      show:false
+      show: false
     },
   };
 

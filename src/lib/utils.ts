@@ -110,3 +110,10 @@ export function formatDateWithTime(date: Date | null): string {
   return `${day}/${month}/${year} à ${hours}:${minutes}`;
 }
 
+
+export const getHours =(date:Date=new Date())=>{
+const dateTime = new Date(date)
+const hours = dateTime.getHours()
+const minute = dateTime.getMinutes()
+return `${hours}:${minute}`
+}
