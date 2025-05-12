@@ -16,7 +16,7 @@ export const fetchDayData = async (
     if (axios.isAxiosError(error)) {
       if (error.response) {
         if (error.response.status === 404) {
-          
+  
           dispatch(setError(null));
         } else {
           dispatch(setError(error.response.data.message || "Erreur serveur."));

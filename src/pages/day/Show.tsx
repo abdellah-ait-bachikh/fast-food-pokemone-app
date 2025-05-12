@@ -151,17 +151,9 @@ const Show = () => {
                           1
                         </td>
                         <td className="px-3 py-2 whitespace-nowrap text-center ">
-                          <Popover placement="right">
-                            <PopoverTrigger>
-                              <Button size='sm' className='px-1' radius='lg' color='warning' isIconOnly variant='flat'>3</Button>
-                            </PopoverTrigger>
-                            <PopoverContent>
-                              <div className="px-1 py-2">
-                                <div className="text-small font-bold">Popover Content</div>
-                                <div className="text-tiny">This is the popover content</div>
-                              </div>
-                            </PopoverContent>
-                          </Popover>
+                        
+                              <Chip size='sm' className='px-1' radius='lg' color='warning'   variant='flat'>3</Chip>
+                           
                         </td>
                         <td className="px-3 py-2 whitespace-nowrap text-center">
                           <Tooltip content={formatMoneyMAD(6036)}><span>{formatNumberShort(6036)}</span></Tooltip>
