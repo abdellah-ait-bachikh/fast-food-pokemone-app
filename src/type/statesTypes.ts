@@ -139,7 +139,9 @@ export interface TdayInitialState {
       totalEarnings:number;
       totalDeleveryPrice:number;
     }[];
-    shart:{products:{labels:string[],series:number[]},offers:{labels:string[],series:number[]}}
+    shart:{products:{labels:string[],series:number[]},offers:{labels:string[],series:number[]}},
+    products:{id:number,name:string,quantity:number,category:{name:string}}[],
+    offers:{id:number,name:string,quantity:number}[]
   };
 }
 export type AppDispatch = typeof store.dispatch;

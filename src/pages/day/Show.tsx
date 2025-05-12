@@ -112,6 +112,102 @@ const Show = () => {
         </div>
         <div className='w-full grid grid-cols-1 md:grid-cols-2 mt-2 gap-2'>
           <div className='p-3 bg-white dark:bg-slate-900 rounded-xl'>
+            <h1 className='font-semibold text-medium sm:text-xl'>Trende de Produits</h1>
+            <div className='max-h-[400px]  overflow-auto '>
+              <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 ">
+                <thead className="ltr:text-left rtl:text-right sticky  top-0 left-0 right-0  backdrop-blur-sm z-[996]">
+                  <tr className=" *:text-gray-900 dark:*:text-white">
+                    <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
+                      N°
+                    </th>
+                    <th className="px-3 py-2 whitespace-nowrap font-semibold text-center">
+                      Produits
+                    </th>
+                    <th className="px-3 py-2 whitespace-nowrap font-semibold text-center">
+                      Total
+                    </th>
+
+                    <th className="px-3 py-2 whitespace-nowrap font-semibold text-center">
+                      Livraison
+                    </th>
+                    <th className="px-3 py-2 whitespace-nowrap font-semibold text-center">
+                      Facture
+                    </th>
+                    <th className="px-3 py-2 whitespace-nowrap font-semibold text-center">
+                      Heure
+                    </th>
+
+                  </tr>
+                </thead>
+
+                <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                  {showDay.products.length > 0 ? (
+                    showDay.products.map((item) => (
+                      <tr
+                        className="*:text-gray-900 *:first:font-medium dark:*:text-white"
+                        key={item.id}
+                      >
+                        <td className="px-3 py-2 whitespace-nowrap">
+                          1
+                        </td>
+                        <td className="px-3 py-2 whitespace-nowrap text-center ">
+
+                          <Chip size='sm' className='px-1' radius='lg' color='primary' variant='flat'>3</Chip>
+
+                        </td>
+                        <td className="px-3 py-2 whitespace-nowrap text-center">
+                          <Tooltip content={formatMoneyMAD(6036)}><span>{formatNumberShort(6036)}</span></Tooltip>
+                          {/* <Tooltip content={item._count.ordersOffers}><span>{formatNumberShort(item._count.ordersOffers)}</span></Tooltip> */}
+                        </td>
+                        <td className="px-3 py-2 whitespace-nowrap text-center">
+                          {
+                            true ? <Tooltip content={formatMoneyMAD(5)}><span>{formatNumberShort(5)}</span></Tooltip>
+                              : <Chip color='danger' size='sm' variant='flat'>No</Chip>
+                          }
+                        </td>
+                        <td className="px-3 py-2 whitespace-nowrap text-center">
+
+                          <Popover placement="right">
+                            <PopoverTrigger>
+                              <Button size='sm' className='px-1' radius='lg' color='warning' isIconOnly variant='flat'><FaFileInvoiceDollar size={20} /></Button>
+                            </PopoverTrigger>
+                            <PopoverContent>
+                              <div className="px-1 py-2">
+                                <div className="text-small font-bold">Popover Content</div>
+                                <div className="text-tiny">This is the popover content</div>
+                              </div>
+                            </PopoverContent>
+                          </Popover>
+                        </td>
+                        <td className="px-3 py-2 whitespace-nowrap text-center">
+                          <Tooltip content={formatDateWithTime(new Date())}><span>{getHours()}</span></Tooltip>
+
+                        </td>
+
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan={5}>
+                        <div className="w-full text-center py-8 text-danger">  Aucun Livreur trouvé</div>
+                      </td>
+                    </tr>
+                  )}
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div className='p-3 bg-white dark:bg-slate-900 rounded-xl'>
+            <h1 className='font-semibold text-medium sm:text-xl'>Trende De Packe</h1>
+            <div className='max-h-[400px] overflow-hidden overflow-y-auto'>
+
+            </div>
+          </div>
+        </div>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 mt-2 gap-2'>
+          <div className='p-3 bg-white dark:bg-slate-900 rounded-xl'>
             <h1 className='font-semibold text-medium sm:text-xl'>Factures de Produits</h1>
             <div className='max-h-[400px]  overflow-auto '>
               <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 ">
@@ -151,9 +247,9 @@ const Show = () => {
                           1
                         </td>
                         <td className="px-3 py-2 whitespace-nowrap text-center ">
-                        
-                              <Chip size='sm' className='px-1' radius='lg' color='warning'   variant='flat'>3</Chip>
-                           
+
+                          <Chip size='sm' className='px-1' radius='lg' color='primary' variant='flat'>3</Chip>
+
                         </td>
                         <td className="px-3 py-2 whitespace-nowrap text-center">
                           <Tooltip content={formatMoneyMAD(6036)}><span>{formatNumberShort(6036)}</span></Tooltip>
