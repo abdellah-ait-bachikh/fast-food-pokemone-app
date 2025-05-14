@@ -76,57 +76,29 @@ export interface TdayInitialState {
     id: string;
     startAt: Date;
     stopAt: Date | null;
-    paymentsOffers: {
-      include: {
-        delevry: {
-          select: {
-            userName: true;
-          };
-        };
-        detailsOffer: {
-          select: {
-            id: true;
-            quantity: true;
-            offer: {
-              select: {
-                name: true;
-                price: true;
-                imageUri: true;
-              };
-            };
-            totalePrice: true;
-          };
-        };
-      };
-    };
     paymentsProducts: {
-      include: {
-        delevry: {
-          select: {
-            userName: true;
-          };
+      id: number;
+      dailyNumber: number;
+      clientPhoneNumber: string;
+      createdAt: string;
+      delevry: { userName: string };
+      delevryPrice: number;
+      detailsProducts: {
+        id: number;
+        product: {
+          id: number;
+          name: string;
+          price: number;
+          category: { name: string };
         };
-        detailsProducts: {
-          select: {
-            id: true;
-            quantity: true;
-            product: {
-              select: {
-                name: true;
-                price: true;
-                category: {
-                  select: {
-                    name: true;
-                    imageUri: true;
-                  };
-                };
-              };
-            };
-            totalePrice: true;
-          };
-        };
-      };
-    };
+        quantity: number;
+        totalePrice: number;
+      }[];
+      isPayed: boolean;
+      totalePrice: number;
+      updatedAt: string;
+    }[];
+    paymentsOffers: {}[];
     deleverys: {
       id: number;
       _count: {
@@ -136,12 +108,20 @@ export interface TdayInitialState {
       userName: string;
       phone: string;
       role: "admin" | "livreur";
-      totalEarnings:number;
-      totalDeleveryPrice:number;
+      totalEarnings: number;
+      totalDeleveryPrice: number;
     }[];
-    shart:{products:{labels:string[],series:number[]},offers:{labels:string[],series:number[]}},
-    products:{id:number,name:string,quantity:number,category:{name:string}}[],
-    offers:{id:number,name:string,quantity:number}[]
+    shart: {
+      products: { labels: string[]; series: number[] };
+      offers: { labels: string[]; series: number[] };
+    };
+    products: {
+      id: number;
+      name: string;
+      quantity: number;
+      category: { name: string };
+    }[];
+    offers: { id: number; name: string; quantity: number }[];
   };
 }
 export type AppDispatch = typeof store.dispatch;

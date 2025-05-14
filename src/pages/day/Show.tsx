@@ -117,7 +117,7 @@ const Show = () => {
               <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 ">
                 <thead className="ltr:text-left rtl:text-right sticky  top-0 left-0 right-0  backdrop-blur-sm z-[996]">
                   <tr className=" *:text-gray-900 dark:*:text-white">
-                    
+
                     <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
                       Produits
                     </th>
@@ -125,8 +125,8 @@ const Show = () => {
                       Quantity
                     </th>
 
-                    
-                   
+
+
 
                   </tr>
                 </thead>
@@ -138,19 +138,19 @@ const Show = () => {
                         className="*:text-gray-900 *:first:font-medium dark:*:text-white"
                         key={item.id}
                       >
-                       
-                       
-                       
+
+
+
                         <td className="px-3 py-2 whitespace-nowrap text-left">
                           {
-                           item.category.name+" " + item.name
+                            item.category.name + " " + item.name
                           }
                         </td>
-                         <td className="px-3 py-2 whitespace-nowrap text-center">
+                        <td className="px-3 py-2 whitespace-nowrap text-center">
                           <Tooltip content={item.quantity}><span>{formatNumberShort(item.quantity)}</span></Tooltip>
                           {/* <Tooltip content={item._count.ordersOffers}><span>{formatNumberShort(item._count.ordersOffers)}</span></Tooltip> */}
                         </td>
-                       
+
 
                       </tr>
                     ))
@@ -170,10 +170,10 @@ const Show = () => {
           <div className='p-3 bg-white dark:bg-slate-900 rounded-xl'>
             <h1 className='font-semibold text-medium sm:text-xl'>Trende De Packe</h1>
             <div className='max-h-[400px] overflow-hidden overflow-y-auto'>
- <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 ">
+              <table className="min-w-full divide-y-2 divide-gray-200 dark:divide-gray-700 ">
                 <thead className="ltr:text-left rtl:text-right sticky  top-0 left-0 right-0  backdrop-blur-sm z-[996]">
                   <tr className=" *:text-gray-900 dark:*:text-white">
-                    
+
                     <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
                       Packe
                     </th>
@@ -181,8 +181,8 @@ const Show = () => {
                       Quantity
                     </th>
 
-                    
-                   
+
+
 
                   </tr>
                 </thead>
@@ -194,19 +194,19 @@ const Show = () => {
                         className="*:text-gray-900 *:first:font-medium dark:*:text-white"
                         key={item.id}
                       >
-                       
-                       
-                       
+
+
+
                         <td className="px-3 py-2 whitespace-nowrap text-left">
                           {
                             item.name
                           }
                         </td>
-                         <td className="px-3 py-2 whitespace-nowrap text-center">
+                        <td className="px-3 py-2 whitespace-nowrap text-center">
                           <Tooltip content={item.quantity}><span>{formatNumberShort(item.quantity)}</span></Tooltip>
                           {/* <Tooltip content={item._count.ordersOffers}><span>{formatNumberShort(item._count.ordersOffers)}</span></Tooltip> */}
                         </td>
-                       
+
 
                       </tr>
                     ))
