@@ -97,6 +97,7 @@ export interface TdayInitialState {
       isPayed: boolean;
       totalePrice: number;
       updatedAt: string;
+      delevryId:number
     }[];
     paymentsOffers: {}[];
     deleverys: {

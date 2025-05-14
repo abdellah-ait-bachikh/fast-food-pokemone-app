@@ -234,9 +234,7 @@ const Show = () => {
                     <th className="px-3 py-2 whitespace-nowrap font-semibold text-left">
                       N°
                     </th>
-                    <th className="px-3 py-2 whitespace-nowrap font-semibold text-center">
-                      Produits
-                    </th>
+
                     <th className="px-3 py-2 whitespace-nowrap font-semibold text-center">
                       Total
                     </th>
@@ -255,27 +253,23 @@ const Show = () => {
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                  {showDay.deleverys.length > 0 ? (
-                    showDay.deleverys.map((item) => (
+                  {showDay.paymentsProducts.length > 0 ? (
+                    showDay.paymentsProducts.map((item) => (
                       <tr
                         className="*:text-gray-900 *:first:font-medium dark:*:text-white"
                         key={item.id}
                       >
                         <td className="px-3 py-2 whitespace-nowrap">
-                          1
+                          {item.dailyNumber}
                         </td>
-                        <td className="px-3 py-2 whitespace-nowrap text-center ">
 
-                          <Chip size='sm' className='px-1' radius='lg' color='primary' variant='flat'>3</Chip>
-
-                        </td>
                         <td className="px-3 py-2 whitespace-nowrap text-center">
-                          <Tooltip content={formatMoneyMAD(6036)}><span>{formatNumberShort(6036)}</span></Tooltip>
+                          <Tooltip content={formatMoneyMAD(item.totalePrice)}><span>{formatNumberShort(item.totalePrice)}</span></Tooltip>
                           {/* <Tooltip content={item._count.ordersOffers}><span>{formatNumberShort(item._count.ordersOffers)}</span></Tooltip> */}
                         </td>
                         <td className="px-3 py-2 whitespace-nowrap text-center">
                           {
-                            true ? <Tooltip content={formatMoneyMAD(5)}><span>{formatNumberShort(5)}</span></Tooltip>
+                            item.delevryId !== null ? <Tooltip content={formatMoneyMAD(5)}><span>{formatNumberShort(5)}</span></Tooltip>
                               : <Chip color='danger' size='sm' variant='flat'>No</Chip>
                           }
                         </td>
@@ -294,7 +288,7 @@ const Show = () => {
                           </Popover>
                         </td>
                         <td className="px-3 py-2 whitespace-nowrap text-center">
-                          <Tooltip content={formatDateWithTime(new Date())}><span>{getHours()}</span></Tooltip>
+                          <Tooltip content={formatDateWithTime(new Date(item.createdAt))}><span>{getHours(new Date(item.createdAt))}</span></Tooltip>
 
                         </td>
 
