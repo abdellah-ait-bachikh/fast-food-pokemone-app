@@ -28,9 +28,9 @@ const Show = () => {
         <div className='grid grid-cols-1  md:grid-cols-[400px_auto] gap-2'>
           <div className='  flex flex-col gap-3'>
             <div className='rounded-xl h-[64px]  bg-white dark:bg-slate-900 p-3 '>
-              <div className='flex items-center gap-1 justify-center md:justify-between'> <Chip size='lg' radius='md' variant='flat' classNames={{ content: "font-semibold" }}>{formatDateWithTime(new Date(showDay.startAt))}</Chip>
+              <div className='flex items-center gap-1 justify-center md:justify-between'> <Chip size='lg' radius='md' variant='flat' classNames={{ content: "font-semibold text-[12px] md:text-medium" }}>{formatDateWithTime(new Date(showDay.startAt))}</Chip>
                 <CgArrowLongRightR className='' size={40} />
-                {showDay.stopAt !== null ? <Chip size='lg' radius='md' variant='flat' classNames={{ content: "font-semibold" }} >{formatDateWithTime(new Date(showDay.stopAt))}</Chip> : <Chip color='danger' variant='flat'><MdOutlineTimer size={20} /></Chip>}
+                {showDay.stopAt !== null ? <Chip size='lg' radius='md' variant='flat' classNames={{ content: "font-semibold text-[12px] md:text-medium" }} >{formatDateWithTime(new Date(showDay.stopAt))}</Chip> : <Chip color='danger' variant='flat'><MdOutlineTimer size={20} /></Chip>}
               </div>
               <div>
 
