@@ -11,6 +11,7 @@ import { FaMotorcycle } from 'react-icons/fa'
 import DonatShart from '@/components/main/day/DonatShart'
 import { FaFileInvoiceDollar } from "react-icons/fa6";
 import SwiperWithDonutCharts from '@/components/main/day/SwiperWithDonutCharts'
+import Invoice from '@/components/ui/Invoice'
 
 const Show = () => {
   const { id } = useParams()
@@ -274,18 +275,8 @@ const Show = () => {
                           }
                         </td>
                         <td className="px-3 py-2 whitespace-nowrap text-center">
+                          <Invoice  {...item}  />
 
-                          <Popover placement="right">
-                            <PopoverTrigger>
-                              <Button size='sm' className='px-1' radius='lg' color='warning' isIconOnly variant='flat'><FaFileInvoiceDollar size={20} /></Button>
-                            </PopoverTrigger>
-                            <PopoverContent>
-                              <div className="px-1 py-2">
-                                <div className="text-small font-bold">Popover Content</div>
-                                <div className="text-tiny">This is the popover content</div>
-                              </div>
-                            </PopoverContent>
-                          </Popover>
                         </td>
                         <td className="px-3 py-2 whitespace-nowrap text-center">
                           <Tooltip content={formatDateWithTime(new Date(item.createdAt))}><span>{getHours(new Date(item.createdAt))}</span></Tooltip>
